@@ -106,6 +106,10 @@ body {
     .body {
       @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5;
 
+      .arrow {
+        @apply absolute right-12 top-1/4 -translate-y-1/2;
+      }
+
       .content {
         @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
 
