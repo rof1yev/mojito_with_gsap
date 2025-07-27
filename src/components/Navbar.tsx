@@ -18,7 +18,7 @@ const Navbar = () => {
       {
         backgroundColor: "#00000050",
         backdropFilter: "blur(10px)",
-        duration: 1,
+        duration: 0.5,
         ease: "power1.inOut",
       }
     );
@@ -38,8 +38,13 @@ const Navbar = () => {
 
         <ul>
           {navLinks.map(({ label, id }: NAVBAR_ITEM_TYPE) => (
-            <li key={id}>
-              <a href={`#${id}`}>{label}</a>
+            <li key={id} className="group">
+              <a
+                className="hover:text-yellow transition-colors"
+                href={`#${id}`}
+              >
+                {label}
+              </a>
             </li>
           ))}
         </ul>
