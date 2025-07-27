@@ -11,7 +11,7 @@ import type {
 const navLinks: NAVBAR_ITEM_TYPE[] = [
   { id: "cocktails", label: "Cocktails" },
   { id: "about", label: "About Us" },
-  { id: "work", label: "The Art" },
+  { id: "art", label: "The Art" },
   { id: "contact", label: "Contact" },
 ];
 
