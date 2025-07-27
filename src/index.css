@@ -43,6 +43,10 @@ body {
   color: transparent;
 }
 
+@utility line-gradient {
+  background: linear-gradient(to bottom, #898989, #00000080);
+}
+
 @utility radial-gradient {
   background: radial-gradient(
     circle at center,

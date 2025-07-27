@@ -1,6 +1,8 @@
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
+import { TiStarFullOutline } from "react-icons/ti";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const About = () => {
   useGSAP(() => {
@@ -53,13 +55,55 @@ const About = () => {
               what turns a simple drink into something truly memorable.
             </p>
 
-            <div>
-              <p className="md:text-3xl text-xl font-bold">
-                <span>4.5</span>/5
-              </p>
-              <p className="text-sm text-white-100">
-                More than +12000 customers
-              </p>
+            <div className="flex flex-col md:flex-row md:items-center items-start">
+              <div>
+                <div className="flex flex-row justify-start gap-0">
+                  {Array.from({ length: 4 }).map((_, i: number) => (
+                    <p key={i} className="text-sm text-yellow">
+                      <TiStarFullOutline size={20} />
+                    </p>
+                  ))}
+                  <p className="text-sm text-yellow">
+                    <FaRegStarHalfStroke size={20} />
+                  </p>
+                </div>
+                <p className="md:text-3xl text-xl font-bold">
+                  <span>4.5</span>/5
+                </p>
+                <p className="text-sm text-white-100">
+                  More than +12000 customers
+                </p>
+              </div>
+
+              <hr className="border-r-[3px] border-neutral-800 h-full hidden md:block" />
+              <hr className="border-t-[3px] border-neutral-800 w-full max-w-64 block md:hidden" />
+
+              <div className="relative p-8 overflow-hidden">
+                <div className="line-gradient absolute top-0 left-0 w-full h-full rounded-full opacity-20" />
+                <div className="noisy rounded-full" />
+                <div className="flex flex-row">
+                  <img
+                    src="/images/profile1.png"
+                    alt="profile-1"
+                    className="relative z-20"
+                  />
+                  <img
+                    src="/images/profile2.png"
+                    alt="profile-2"
+                    className="-ml-4 relative z-20"
+                  />
+                  <img
+                    src="/images/profile3.png"
+                    alt="profile-3"
+                    className="-ml-4 relative z-20"
+                  />
+                  <img
+                    src="/images/profile4.png"
+                    alt="profile-4"
+                    className="-ml-4 relative z-20"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
